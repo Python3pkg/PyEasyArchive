@@ -58,7 +58,7 @@ def create_7z():
                     'create.7z',
                     libarchive.constants.ARCHIVE_FORMAT_7ZIP, 
                     ['/etc/profile']):
-        print("Adding: %s" % (entry))
+        print(("Adding: %s" % (entry)))
 
 #create_7z()
 

@@ -8,7 +8,7 @@ def _pre_install():
     try:
         import libarchive.library
     except OSError as e:
-        print("Library can not be loaded: %s" % (str(e)))
+        print(("Library can not be loaded: %s" % (str(e))))
         raise
 
 
@@ -25,7 +25,7 @@ with open(os.path.join(app_path, 'resources', 'README.rst')) as f:
       long_description = f.read()
 
 with open(os.path.join(app_path, 'resources', 'requirements.txt')) as f:
-      install_requires = list(map(lambda s: s.strip(), f))
+      install_requires = list([s.strip() for s in f])
 
 description = "Python adapter for universal, libarchive-based archive access."
 
